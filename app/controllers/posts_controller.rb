@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @post = Post.new
-    @posts = Post.thread
+    @posts = Post.thread.page params[:page]
   end
 
   # GET /posts/1

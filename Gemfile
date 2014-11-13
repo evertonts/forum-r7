@@ -37,6 +37,7 @@ group :development do
   gem 'rubycritic'
 end
 
+gem 'kaminari'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
