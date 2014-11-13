@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  has_many :posts
+  has_many :replies, class_name: 'Post'
   
   validates :message, presence: true
   

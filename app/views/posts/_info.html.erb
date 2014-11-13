@@ -1,0 +1,10 @@
+<ol>
+	<li> 
+		<%= post.created_at	%>
+		<%= post.message %> 
+		
+		<% post.replies.each do |reply| %>
+			<%= render 'info', post: reply %>
+		<% end %>
+	</li>
+</ol>
