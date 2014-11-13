@@ -1,3 +1,5 @@
 class Post < ActiveRecord::Base
-  hash_many :replies
+  has_many :replies
+  
+  validates :message, presence: true
 end
