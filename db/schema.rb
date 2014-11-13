@@ -15,12 +15,6 @@ ActiveRecord::Schema.define(version: 20141113024720) do
 
   create_table "posts", force: true do |t|
     t.string   "message"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "replies", force: true do |t|
-    t.string   "message"
     t.integer  "post_id"
     t.datetime "created_at"
     t.datetime "updated_at"
