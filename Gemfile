@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'guard-rspec', require: false
+  gem 'shoulda-matchers', require: false
+end
+
+group :development do
   gem 'rails_best_practices'
   gem 'rubycritic'
 end
