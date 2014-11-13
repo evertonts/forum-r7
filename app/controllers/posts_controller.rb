@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @post = Post.new
-    @posts = Post.all
+    @posts = Post.thread
   end
 
   # GET /posts/1
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
         format.html { redirect_to posts_url }
         format.json { render :show, status: :created, location: @post }
       else
-        format.html { render :new }
+        format.html { redirect_to posts_url }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
