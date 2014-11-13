@@ -13,7 +13,6 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     page = Post.thread.page(1).total_pages
-    binding.pry
     flash[:alert] = 'Could not save post' unless @post.save
     puts "p: #{params[:page]}"
     
