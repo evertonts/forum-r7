@@ -34,6 +34,8 @@ GEM
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.2.2)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -50,6 +52,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colored (1.2)
+    debug_inspector (0.0.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     diff-lcs (1.2.5)
@@ -105,6 +108,10 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-nav (0.2.4)
+      pry (>= 0.9.10, < 0.11.0)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -225,11 +232,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  binding_of_caller
   coffee-rails (~> 4.0.0)
   guard-rspec
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
+  pry-nav
+  pry-rails
   rails (= 4.1.7)
   rails_best_practices
   rspec-rails (~> 3.0.0)

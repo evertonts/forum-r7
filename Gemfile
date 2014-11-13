@@ -30,11 +30,14 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
   gem 'guard-rspec', require: false
   gem 'shoulda-matchers', require: false
+  gem 'pry-rails'
+  gem 'pry-nav'
 end
 
 group :development do
   gem 'rails_best_practices'
   gem 'rubycritic'
+  gem 'binding_of_caller'
 end
 
 gem 'kaminari'
