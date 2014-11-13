@@ -21,8 +21,12 @@ describe ProfanityFilter do
   describe '#sanitize!' do
     before { allow(subject).to receive(:blacklist) { 'arma' } }
     
-    it 'exchange arma for XXXX' do
+    it 'exchanges arma for XXXX' do
       expect(subject.sanitize!('arma')).to eq 'XXXX'
+    end
+    
+    it 'does not exchange armado' do
+      expect(subject.sanitize!('armado')).to eq 'armado'
     end
   end
 end
