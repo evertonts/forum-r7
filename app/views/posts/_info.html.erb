@@ -2,7 +2,10 @@
 	<li> 
 		<%= post.created_at	%>
 		<%= post.message %> 
+		<%= link_to "Reply", post_new_reply_url(post_id: post.id), remote: true, data: { 'post-id' => post.id  } %>
 		
+		<div id="form-content-<%= post.id %>"></div>
+		</div>
 		<% post.replies.each do |reply| %>
 			<%= render 'info', post: reply %>
 		<% end %>

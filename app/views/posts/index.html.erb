@@ -1,6 +1,6 @@
 <h1>Forum</h1>
 
-<%= render 'form' %>
+<%= render 'form', post: @post, post_id: nil %>
 
 <% @posts.each do |post| %>
 	<%= link_to "#{post.id}.#{post.created_at}", post %>

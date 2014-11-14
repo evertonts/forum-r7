@@ -1,6 +1,7 @@
-<%= form_for(@post) do |f| %>
+<%= form_for(post, html: { class: 'reply-form' }) do |f| %>
   <%= f.text_area :message %>
-
+	<%= f.hidden_field :post_id, value: post_id %>
+	
   <div class="actions">
     <%= f.submit %>
   </div>
